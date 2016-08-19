@@ -35,10 +35,10 @@ To build in this behavior, initially you can copy and paste the code that we ran
 
 ```ruby
 def create
-  post = Post.new
-  post.title = params[:title]
-  post.description = params[:description]
-  post.save
+  @post = Post.new
+  @post.title = params[:title]
+  @post.description = params[:description]
+  @post.save
 end
 ```
 
@@ -80,3 +80,5 @@ In this `create` action I'm following the standard convention of redirecting to 
 So everything is working and now users are able to create records in the database using the HTML form and  automatically be redirected to a `show` page where they can see the data that they entered in. There are a number of refactors that we will implement in the future, such as `strong parameters`, `error handling`, and tasks such as that, but we'll leave for a future lesson.
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/rails-create-action-readme'>Create Action</a> on Learn.co and start learning to code for free.</p>
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/rails-create-action-readme'>Create Action</a> on Learn.co and start learning to code for free.</p>
